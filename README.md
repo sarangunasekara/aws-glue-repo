@@ -73,34 +73,3 @@ To perform this, I've used two different datasets:
          |-- no_of_special_requests: integer (nullable = true)
          |-- booking_status: string (nullable = true)
      ```
-     
-## USGS Dataset Overview:
-----------------------------------------
-- Schema:
-   ```bash
-        root
-         |-- time: timestamp (nullable = true)
-         |-- latitude: double (nullable = true)
-         |-- longitude: double (nullable = true)
-         |-- depth: double (nullable = true)
-         |-- mag: double (nullable = true)
-         |-- magType: string (nullable = true)
-         |-- nst: double (nullable = true)
-         |-- gap: double (nullable = true)
-         |-- dmin: double (nullable = true)
-         |-- rms: double (nullable = true)
-         |-- net: string (nullable = true)
-         |-- id: string (nullable = true)
-         |-- updated: timestamp (nullable = true)
-         |-- place: string (nullable = true)
-         |-- type: string (nullable = true)
-         |-- horizontalError: double (nullable = true)
-         |-- depthError: double (nullable = true)
-         |-- magError: double (nullable = true)
-         |-- magNst: double (nullable = true)
-         |-- status: string (nullable = true)
-         |-- locationSource: string (nullable = true)
-         |-- magSource: string (nullable = true)
-    ```   
-         
-The two different datasets have been used to perform different operations and workflows. And tried to do this with jupyter notebook and by graph through visual interactive console for learning practise.
