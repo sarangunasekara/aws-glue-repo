@@ -1,0 +1,39 @@
+{
+  "name" : "Hotel-reservation-by-graph",
+  "description" : "",
+  "role" : "arn:aws:iam::319474470582:role/service-role/AWSGlueServiceRole-Saran",
+  "executionProperty" : {
+    "maxConcurrentRuns" : 1
+  },
+  "command" : {
+    "name" : "glueetl",
+    "scriptLocation" : "s3://saran-g-bucket/hotel-reservation/scripts/hotel-reserve-by-graph.py",
+    "pythonVersion" : "3"
+  },
+  "defaultArguments" : {
+    "--enable-metrics" : "true",
+    "--enable-spark-ui" : "true",
+    "--spark-event-logs-path" : "s3://saran-g-bucket/hotel-reservation/logs/",
+    "--enable-job-insights" : "true",
+    "--enable-glue-datacatalog" : "true",
+    "--enable-continuous-cloudwatch-log" : "true",
+    "--job-bookmark-option" : "job-bookmark-disable",
+    "--job-language" : "python",
+    "--TempDir" : "s3://saran-g-bucket/hotel-reservation/"
+  },
+  "maxRetries" : 0,
+  "allocatedCapacity" : 10,
+  "timeout" : 2880,
+  "maxCapacity" : 10.0,
+  "glueVersion" : "3.0",
+  "numberOfWorkers" : 10,
+  "workerType" : "G.1X",
+  "executionClass" : "STANDARD",
+  "codeGenConfigurationNodes" : "{\"node-1675800361672\":{\"S3DirectTarget\":{\"Compression\":\"none\",\"Format\":\"json\",\"Inputs\":[\"node-1675800346045\"],\"Name\":\"Amazon S3\",\"PartitionKeys\":[],\"Path\":\"s3://saran-g-bucket/hotel-reservation/output/\",\"SchemaChangePolicy\":{\"EnableUpdateCatalog\":false}}},\"node-1675800274209\":{\"Aggregate\":{\"Aggs\":[{\"AggFunc\":\"sum\",\"Column\":[\"no_of_special_requests\"]}],\"Groups\":[[\"booking_status\"]],\"Inputs\":[\"node-1675800249582\"],\"Name\":\"Aggregate\"}},\"node-1675800249582\":{\"DropNullFields\":{\"Inputs\":[\"node-1675800225310\"],\"Name\":\"Drop Null Fields\",\"NullCheckBoxList\":{\"IsEmpty\":true,\"IsNegOne\":false,\"IsNullString\":true},\"NullTextList\":[]}},\"node-1675800346045\":{\"SelectFields\":{\"Inputs\":[\"node-1675800274209\"],\"Name\":\"Select Fields\",\"Paths\":[[\"booking_status\"],[\"sum(no_of_special_requests)\"]]}},\"node-1675800225310\":{\"CatalogSource\":{\"Database\":\"hotel-reservation\",\"Name\":\"AWS Glue Data Catalog\",\"Table\":\"input\"}}}",
+  "sourceControlDetails" : {
+    "provider" : "GITHUB",
+    "repository" : "aws-glue-repo",
+    "branch" : "hotel-reservation",
+    "folder" : "Hotel-reservation-by-graph"
+  }
+}
