@@ -22,7 +22,8 @@ To perform this, I've used two different datasets:
 ----------------------------------------
 - Columns are : ['Booking_ID', 'no_of_adults', 'no_of_children', 'no_of_weekend_nights', 'no_of_week_nights', 'type_of_meal_plan', 'required_car_parking_space', 'room_type_reserved', 'lead_time', 'arrival_year', 'arrival_month', 'arrival_date', 'market_segment_type', 'repeated_guest', 'no_of_previous_cancellations', 'no_of_previous_bookings_not_canceled', 'avg_price_per_room', 'no_of_special_requests', 'booking_status']
 
-- Schema : 
+- Schema :
+   ```bash 
         root
          |-- Booking_ID: string (nullable = true)
          |-- no_of_adults: integer (nullable = true)
@@ -43,10 +44,12 @@ To perform this, I've used two different datasets:
          |-- avg_price_per_room: double (nullable = true)
          |-- no_of_special_requests: integer (nullable = true)
          |-- booking_status: string (nullable = true)
-         
+     ```
+     
 ## USGS Dataset Overview:
 ----------------------------------------
 - Schema:
+   ```bash
         root
          |-- time: timestamp (nullable = true)
          |-- latitude: double (nullable = true)
@@ -70,6 +73,6 @@ To perform this, I've used two different datasets:
          |-- status: string (nullable = true)
          |-- locationSource: string (nullable = true)
          |-- magSource: string (nullable = true)
-         
+    ```   
          
 The two different datasets have been used to perform different operations and workflows. And tried to do this with jupyter notebook and by graph through visual interactive console for learning practise.
