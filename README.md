@@ -17,35 +17,7 @@ This outline provides a general approach for creating an orchestration pipeline 
 To perform this, I've used two different datasets:
     - USGS dataset
     - Hotel Reservation
-    
-## Hotel Reservation Dataset Overview:
-----------------------------------------
-- Columns are : ['Booking_ID', 'no_of_adults', 'no_of_children', 'no_of_weekend_nights', 'no_of_week_nights', 'type_of_meal_plan', 'required_car_parking_space', 'room_type_reserved', 'lead_time', 'arrival_year', 'arrival_month', 'arrival_date', 'market_segment_type', 'repeated_guest', 'no_of_previous_cancellations', 'no_of_previous_bookings_not_canceled', 'avg_price_per_room', 'no_of_special_requests', 'booking_status']
 
-- Schema :
-   ```bash 
-        root
-         |-- Booking_ID: string (nullable = true)
-         |-- no_of_adults: integer (nullable = true)
-         |-- no_of_children: integer (nullable = true)
-         |-- no_of_weekend_nights: integer (nullable = true)
-         |-- no_of_week_nights: integer (nullable = true)
-         |-- type_of_meal_plan: string (nullable = true)
-         |-- required_car_parking_space: integer (nullable = true)
-         |-- room_type_reserved: string (nullable = true)
-         |-- lead_time: integer (nullable = true)
-         |-- arrival_year: integer (nullable = true)
-         |-- arrival_month: integer (nullable = true)
-         |-- arrival_date: integer (nullable = true)
-         |-- market_segment_type: string (nullable = true)
-         |-- repeated_guest: integer (nullable = true)
-         |-- no_of_previous_cancellations: integer (nullable = true)
-         |-- no_of_previous_bookings_not_canceled: integer (nullable = true)
-         |-- avg_price_per_room: double (nullable = true)
-         |-- no_of_special_requests: integer (nullable = true)
-         |-- booking_status: string (nullable = true)
-     ```
-     
 ## USGS Dataset Overview:
 ----------------------------------------
 - Schema:
@@ -76,3 +48,6 @@ To perform this, I've used two different datasets:
     ```   
          
 The two different datasets have been used to perform different operations and workflows. And tried to do this with jupyter notebook and by graph through visual interactive console for learning practise.
+
+The project overview, description and outline describes a dataset related to earthquake data collected by the US Geological Survey (USGS). The dataset contains information about various attributes of earthquakes such as time, location, magnitude, depth, and source, among others. Each attribute is represented as a field with a data type, such as double or string, and some fields may contain null values. The project can be used to perform data analysis and gain insights into earthquakes, including their frequency, location, and severity. An outline of the project could include steps such as loading the data into a database, cleaning and pre-processing the data, and performing data analysis and visualization to generate meaningful insights.
+
