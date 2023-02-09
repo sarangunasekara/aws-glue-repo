@@ -45,10 +45,6 @@ This outline provides a general approach for creating an orchestration pipeline 
 To perform this, I've used two different datasets:
     - USGS dataset
     - Hotel Reservation
-    
-## Hotel Reservation Dataset Overview:
-----------------------------------------
-- Columns are : ['Booking_ID', 'no_of_adults', 'no_of_children', 'no_of_weekend_nights', 'no_of_week_nights', 'type_of_meal_plan', 'required_car_parking_space', 'room_type_reserved', 'lead_time', 'arrival_year', 'arrival_month', 'arrival_date', 'market_segment_type', 'repeated_guest', 'no_of_previous_cancellations', 'no_of_previous_bookings_not_canceled', 'avg_price_per_room', 'no_of_special_requests', 'booking_status']
 
 - Schema :
    ```bash 
@@ -73,3 +69,36 @@ To perform this, I've used two different datasets:
          |-- no_of_special_requests: integer (nullable = true)
          |-- booking_status: string (nullable = true)
      ```
+     
+## USGS Dataset Overview:
+----------------------------------------
+- Schema:
+   ```bash
+        root
+         |-- time: timestamp (nullable = true)
+         |-- latitude: double (nullable = true)
+         |-- longitude: double (nullable = true)
+         |-- depth: double (nullable = true)
+         |-- mag: double (nullable = true)
+         |-- magType: string (nullable = true)
+         |-- nst: double (nullable = true)
+         |-- gap: double (nullable = true)
+         |-- dmin: double (nullable = true)
+         |-- rms: double (nullable = true)
+         |-- net: string (nullable = true)
+         |-- id: string (nullable = true)
+         |-- updated: timestamp (nullable = true)
+         |-- place: string (nullable = true)
+         |-- type: string (nullable = true)
+         |-- horizontalError: double (nullable = true)
+         |-- depthError: double (nullable = true)
+         |-- magError: double (nullable = true)
+         |-- magNst: double (nullable = true)
+         |-- status: string (nullable = true)
+         |-- locationSource: string (nullable = true)
+         |-- magSource: string (nullable = true)
+    ```   
+         
+The two different datasets have been used to perform different operations and workflows. And tried to do this with jupyter notebook and by graph through visual interactive console for learning practise.
+
+The project overview, description and outline describes a dataset related to earthquake data collected by the US Geological Survey (USGS). The dataset contains information about various attributes of earthquakes such as time, location, magnitude, depth, and source, among others. Each attribute is represented as a field with a data type, such as double or string, and some fields may contain null values. The project can be used to perform data analysis and gain insights into earthquakes, including their frequency, location, and severity. An outline of the project could include steps such as loading the data into a database, cleaning and pre-processing the data, and performing data analysis and visualization to generate meaningful insights.
